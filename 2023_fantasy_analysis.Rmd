@@ -1,0 +1,39 @@
+---
+title: "2023 Fanasy Football Analysis: Vegas based projections"
+#output: html_notebook
+---
+
+# Libraries
+
+```{r}
+library(tidyverse)
+```
+
+
+# Data
+
+```{r}
+overall_rank <- read.csv(file = "data/Overall-FullPPR.csv")
+qb_rank <- read.csv(file = "data/QB.csv")
+rb_rank <- read.csv(file = "data/RB-FullPPR.csv")
+wr_rank <- read.csv(file = "data/WR-FullPPR.csv")
+te_rank <- read.csv(file = "data/TE-FullPPR.csv")
+```
+
+# Data wrangling
+
+```{r}
+all_rank <- rbind(qb_rank, rb_rank, wr_rank, te_rank) |>
+  left_join(all_rank, overall_rank, by = "Player")
+```
+
+
+
+
+
+
+
+```{r}
+
+```
+
