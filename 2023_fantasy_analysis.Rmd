@@ -9,7 +9,6 @@ title: "2023 Fanasy Football Analysis: Vegas based projections"
 library(tidyverse)
 ```
 
-
 # Data
 
 ```{r}
